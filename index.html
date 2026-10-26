@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightblue;
+    }
+
+    .login-box {
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid gray;
+      border-radius: 8px;
+    }
+
+    input {
+      width: 95%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #message {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+
+    <button onclick="login()">Login</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function login() {
+      
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var message = document.getElementById("message");
+
+      if (username === "" || password === "") {
+        message.textContent = "Please enter your username and password.";
+      } else {
+        message.textContent = "Login form submitted.";
+      }
+    }
+  </script>
+</body>
+</html>
